@@ -1,0 +1,50 @@
+<div class="container-fluid">
+	<h4>Sign-in or create a new Huqvarna account profile</h4>
+	
+	<div class="row" ng-controller="loginCtrl">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">I have a Huqvarna Account</div>
+				<div class="panel-body">
+					<div class="alert alert-danger" ng-show="login.errorOccurred">{{login.errorMessage}}</div>
+					<form name="signinform" method="post" novalidate class="login-form">
+						<div>
+							<label for="email" style="width:15%;">Email: </label>
+							<input type="email" id="email" placeholder="Enter Email Address" class="input-md" ng-model="login.id" required>
+							
+						</div>
+						<div>
+							<label for="pwd" style="width:15%;">Password: </label>
+							<input type="password" id="pwd" name="frmPassword" placeholder="Enter Password" class="input-md"  ng-model="login.pwd" required>
+						</div>
+						<div >
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember_me" id="rem_me" ng-model="login.rememberMe"> Remember me</label>
+							</div>
+						</div>
+						<div >
+							<a href="#">Forgot Password?</a>
+						</div>
+						<div >
+							<button type="submit" class="btn btn-primary" ng-click="signin()">Sign in</button>
+						</div>
+					</form>
+				</div>
+			</div>				
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">I don't have a Huqvarna Account</div>
+				<div class="panel-body">
+					<p>Registering provides you with personalized services, including:</p>
+					<ul>
+						<li>Wish list</li>
+						<li>Order Status</li>
+						<li>Personal address book</li>
+					</ul>
+					<button type="button" class="btn btn-primary">Register</button>
+				</div>
+			</div>				
+		</div>
+	</div>
+</div>
